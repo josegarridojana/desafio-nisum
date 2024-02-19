@@ -3,7 +3,9 @@
 Detalle:
 
 > [Desafio Nisum: Build a CRUD Rest APIs](http://localhost:8088/desafio-nisum/)
+
 > [Desafio Nisum: Build a CRUD Rest APIs Actuator](http://localhost:8088/desafio-nisum/actuator/health)
+
 > [Desafio Nisum: Build a CRUD Rest APIs Swagger]( http://localhost:8088/desafio-nisum/swagger-ui.htm)
 
 
@@ -62,6 +64,13 @@ Ejecute tanto el back-end como el front-end en un solo lugar:
 
 Se deja collection de postman:
 > 
+
+dentro de la carpeta "postman"
+
+Se deja diagrama de flujo:
+> 
+
+dentro de la carpeta "flujo"
 
 ## Run Spring Boot application in Maven
 ```
