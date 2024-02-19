@@ -12,6 +12,7 @@
  */
 package com.nisum.ms.services.impl;
 
+import com.nisum.ms.constants.DesafioConstants;
 import com.nisum.ms.entities.Phone;
 import com.nisum.ms.entities.Usuario;
 import com.nisum.ms.exceptions.SimpleException;
@@ -19,6 +20,7 @@ import com.nisum.ms.properties.ExpresRegexProperties;
 import com.nisum.ms.repositories.UsuarioRepository;
 import com.nisum.ms.services.UsuarioService;
 import com.nisum.ms.utils.DesafioUtils;
+import com.nisum.ms.utils.JWTUtils;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -47,6 +49,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public List<Usuario> getAllUsuarios() {
         try {
+            System.out.println("JWTUtils:" + JWTUtils.createJWT(DesafioConstants.SUBJECT));
             return this.usuarioRepository.findAll();
         } catch (final Exception ex) {
             throw new SimpleException("Error al consultar listado de usuarios", HttpStatus.BAD_REQUEST.value(), ex);
@@ -97,6 +100,8 @@ public class UsuarioServiceImpl implements UsuarioService {
             saveUsuario.setModified(new Date());
             saveUsuario.setLastLogin(new Date());
             saveUsuario.setToken(UUID.randomUUID());
+            // Por si se utiliza JWT
+            // saveUsuario.setToken(JWTUtils.createJWT(usuario.getName()));
             final List<Phone> phones = usuario.getPhones();
             saveUsuario.setPhones(phones);
             return this.usuarioRepository

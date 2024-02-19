@@ -23,6 +23,7 @@ Pasos:
 - Uso de lombook
 - Validacion de email
 - Validacion de password es Mínimo ocho caracteres, al menos una letra y un número
+- No es necesario scrip de bd ya que se genera automatico
 
 CURL
 > 

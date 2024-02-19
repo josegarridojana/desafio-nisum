@@ -34,6 +34,22 @@ public final class DesafioConstants {
         "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
 
     // -------------------------------------------------------------------
+    // --TOKEN --------------------------------------------------------
+    // -------------------------------------------------------------------
+    /** SECRET. */
+    public static final String SECRET = "baeldung";
+    /** ISSUER. */
+    public static final String ISSUER = "Baeldung";
+    /** SUBJECT. */
+    public static final String SUBJECT = "Baeldung Details";
+    /** DATA_CLAIM. */
+    public static final String DATA_CLAIM = "userId";
+    /** DATA. */
+    public static final String DATA = "1234";
+    /** TOKEN_VALIDITY_IN_MILLIS. */
+    public static final long TOKEN_VALIDITY_IN_MILLIS = 5000L;
+
+    // -------------------------------------------------------------------
     // -- Constructor ----------------------------------------------------
     // -------------------------------------------------------------------
     /**
