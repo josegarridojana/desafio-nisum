@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "5cb5c1ea-bbd7-4fa5-808d-3e15c1e98014",
+		"name": "desafio-nisum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2474715"
+	},
+	"item": [
+		{
+			"name": "usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios-por-nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios/por-nombre?nombre=Juan Rodriguez",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios",
+						"por-nombre"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Juan Rodriguez"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios-por-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios/activos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios",
+						"activos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Juan Rodriguez\",\r\n        \"email\": \"juan@rodriguez.org\",\r\n        \"password\": \"hunter288\",\r\n        \"phones\": [\r\n            {\r\n                \"number\": \"12345637\",\r\n                \"cityCode\": \"1\",\t\t\t\r\n                \"contryCode\": \"57\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"Juan Rodriguez_\",\r\n        \"email\": \"juan@rodriguez.org\",\r\n        \"password\": \"hunter2\",\r\n        \"phones\": [\r\n            {\r\n                \"id\": \"2\",   \r\n                \"number\": \"1234567\",\r\n                \"cityCode\": \"1\",\t\t\t\r\n                \"contryCode\": \"578\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-por-id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8088/desafio-nisum/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"desafio-nisum",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

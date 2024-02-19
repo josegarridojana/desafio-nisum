@@ -63,14 +63,23 @@ Ejecute tanto el back-end como el front-end en un solo lugar:
 Se deja collection de postman:
 > 
 
-## Run Spring Boot application
+## Run Spring Boot application in Maven
 ```
 mvn spring-boot:run
 ```
 
 ## Run Spring Boot application IDE Eclipse
 ```
-mvn spring-boot:run
+run as run
+run configurations
+create manager and run configurations
+
+spring-boot:run
+```
+
+## Run Spring Boot application java
+```
+java -jar nombreJar.jar
 ```
 
 # Desafío Java Nisum
